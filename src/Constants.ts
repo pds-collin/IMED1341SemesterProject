@@ -1,9 +1,27 @@
-interface Experience {
+import type { CollectionItem } from './components/Collection.tsx';
+
+import designPatterns from './assets/design-patterns.jpg';
+import databaseDesign from './assets/database-design.jpg';
+import cleanCode from './assets/clean-code.jpg';
+import pragProg from './assets/prag-prog.jpg';
+import cleanArchitecture from './assets/clean-architecture.jpg';
+import tdd from './assets/tdd.jpg';
+import thinkingInSystems from './assets/thinking-in-systems.jpg';
+import eventDrivenMicroservices from './assets/event-driven-microservices.jpg';
+import monolithToMicroservices from './assets/monolith-to-microservices.jpg';
+import staffEngineer from './assets/staff-engineer.jpg';
+import seaOfTranquility from './assets/sea-of-tranquility.jpg';
+import designingInterfaces from './assets/designing-interfaces.jpg';
+import portrait from './assets/portrait.png';
+
+export interface Experience {
     company: string;
     role: string;
     period: string;
     highlights: string[];
 }
+
+export const profilePicture = portrait;
 
 export const resumeData = {
     name: "Preston Sparks",
@@ -17,7 +35,7 @@ export const resumeData = {
     },
     experience: [
         {
-            company: "Private Company", role: "Tech Lead", period: "2025 — Present",
+            company: "ACT Building Systems", role: "Tech Lead", period: "2025 — Present",
             highlights: [
                 "Led migration from monolithic legacy system to event-driven microservices",
                 "Mentored junior developers across multiple product teams",
@@ -28,7 +46,7 @@ export const resumeData = {
             ],
         },
         {
-            company: "Private Company", role: "Senior Software Engineer", period: "2022 — 2025",
+            company: "ACT Building Systems", role: "Senior Software Engineer", period: "2023 — 2025",
             highlights: [
                 "Built core payment infrastructure from scratch",
                 "Designed and implemented service for private object storage and retrieval",
@@ -38,7 +56,7 @@ export const resumeData = {
             ],
         },
         {
-            company: "Private Company", role: "Software Engineer", period: "2019 — 2022",
+            company: "ACT Building Systems", role: "Software Engineer", period: "2019 — 2023",
             highlights: [
                 "Built fully featured sales lead management system",
                 "Implemented programmatic generation of roll-forming machine files",
@@ -47,7 +65,7 @@ export const resumeData = {
             ],
         },
         {
-            company: "Private Company", role: "Junior Software Engineer", period: "2018 — 2019",
+            company: "ACT Building Systems", role: "Junior Software Engineer", period: "2018 — 2019",
             highlights: [
                 "Took ownership of existing PHP systems while learning company tribal knowledge",
                 "Migrated shared hosting servers to AWS",
@@ -55,7 +73,7 @@ export const resumeData = {
             ],
         },
         {
-            company: "Various Telecom Contractors", role: "DC Electrician", period: "2010 — 2018",
+            company: "Various Contractors", role: "DC Electrician", period: "2010 — 2018",
             highlights: [
                 "Developed and documented conversion protocol for GE Galaxy power plants",
                 "Installed emergency battery backup systems in cell towers",
@@ -63,112 +81,133 @@ export const resumeData = {
             ],
         },
     ] as Experience[],
-    currentlyLearning: ["Go", "Python"],
     readingList: [
-        "Clean Code — Robert Martin",
-        "Pragmatic Programmer — Dave Thomas",
-        "Clean Architecture — Robert Martin",
-        "Test Driven Development — Kent Beck",
-        "Thinking in Systems — Donella Meadows",
-        "Building Event-Driven Microservices — Adam Bellemare",
-        "Monolith to Microservices — Sam Newman",
-        "Staff Engineer — Will Larson",
-        "Sea of Tranquility — Emily St. John Mandel",
-        "Designing Interfaces — Jenifer Tidwell",
-    ],
+        {
+            title: "Design Patterns", subtitle: "Gang of Four", image: designPatterns,
+            links: [
+                { label: "Goodreads", href: "https://www.goodreads.com/book/show/85009.Design_Patterns" },
+                { label: "Amazon", href: "https://www.amazon.com/dp/0201633612" },
+            ],
+        },
+        {
+            title: "Database Design for Mere Mortals", subtitle: "Michael J. Hernandez", image: databaseDesign,
+            links: [
+                { label: "Goodreads", href: "https://www.goodreads.com/book/show/150062.Database_Design_for_Mere_Mortals" },
+                { label: "Amazon", href: "https://www.amazon.com/dp/0136788041" },
+            ],
+        },
+        {
+            title: "Clean Code", subtitle: "Robert Martin", image: cleanCode,
+            links: [
+                { label: "Goodreads", href: "https://www.goodreads.com/book/show/3735293-clean-code" },
+                { label: "Amazon", href: "https://www.amazon.com/dp/0132350882" },
+            ],
+        },
+        {
+            title: "The Pragmatic Programmer", subtitle: "Dave Thomas", image: pragProg,
+            links: [
+                { label: "Goodreads", href: "https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer" },
+                { label: "Amazon", href: "https://www.amazon.com/dp/0135957052" },
+            ],
+        },
+        {
+            title: "Clean Architecture", subtitle: "Robert Martin", image: cleanArchitecture,
+            links: [
+                { label: "Goodreads", href: "https://www.goodreads.com/book/show/18043011-clean-architecture" },
+                { label: "Amazon", href: "https://www.amazon.com/dp/0134494164" },
+            ],
+        },
+        {
+            title: "Test Driven Development", subtitle: "Kent Beck", image: tdd,
+            links: [
+                { label: "Goodreads", href: "https://www.goodreads.com/book/show/387190.Test_Driven_Development" },
+                { label: "Amazon", href: "https://www.amazon.com/dp/0321146530" },
+            ],
+        },
+        {
+            title: "Thinking in Systems", subtitle: "Donella Meadows", image: thinkingInSystems,
+            links: [
+                { label: "Goodreads", href: "https://www.goodreads.com/book/show/3828902-thinking-in-systems" },
+                { label: "Amazon", href: "https://www.amazon.com/dp/1603580557" },
+            ],
+        },
+        {
+            title: "Building Event-Driven Microservices", subtitle: "Adam Bellemare", image: eventDrivenMicroservices,
+            links: [
+                { label: "Goodreads", href: "https://www.goodreads.com/book/show/51163447-building-event-driven-microservices" },
+                { label: "Amazon", href: "https://www.amazon.com/dp/1492057894" },
+            ],
+        },
+        {
+            title: "Monolith to Microservices", subtitle: "Sam Newman", image: monolithToMicroservices,
+            links: [
+                { label: "Goodreads", href: "https://www.goodreads.com/book/show/44144499-monolith-to-microservices" },
+                { label: "Amazon", href: "https://www.amazon.com/dp/1492047848" },
+            ],
+        },
+        {
+            title: "Staff Engineer", subtitle: "Will Larson", image: staffEngineer,
+            links: [
+                { label: "Goodreads", href: "https://www.goodreads.com/book/show/56481725-staff-engineer" },
+                { label: "Amazon", href: "https://www.amazon.com/dp/1736417916" },
+            ],
+        },
+        {
+            title: "Sea of Tranquility", subtitle: "Emily St. John Mandel", image: seaOfTranquility,
+            links: [
+                { label: "Goodreads", href: "https://www.goodreads.com/book/show/58446227-sea-of-tranquility" },
+                { label: "Amazon", href: "https://www.amazon.com/dp/0593321448" },
+            ],
+        },
+        {
+            title: "Designing Interfaces", subtitle: "Jenifer Tidwell", image: designingInterfaces,
+            links: [
+                { label: "Goodreads", href: "https://www.goodreads.com/book/show/344724.Designing_Interfaces" },
+                { label: "Amazon", href: "https://www.amazon.com/dp/1492051969" },
+            ],
+        },
+    ] as CollectionItem[],
 };
 
-export const resumeCodeText = "{\n" +
-    "  name: \"Preston Sparks\",\n" +
-    "  title: \"Senior Full-Stack Software Engineer\",\n" +
-    "  location: \"TX, USA\",\n" +
-    "  \n" +
-    "  skills: {\n" +
-    "    languages: [\"C#\", \"TypeScript\", \"PHP\", \"SQL\", \"C++\"],\n" +
-    "    frontend: [\"React\", \"Blazor UI\", \"Vue\", \"MaterializeCSS\"],\n" +
-    "    backend: [\".NET\", \"Laravel\", \"PostgreSQL\", \"Redis\", \"RabbitMQ\", \"MySQL\"],\n" +
-    "    tools: [\"Git\", \"Docker\", \"AWS\", \"Kubernetes\", \"Pulumi\", \"MartenDB\"],\n" +
-    "    technologies: [\"Git\", \"Docker\", \"AWS\", \"Kubernetes\"],\n" +
-    "  },\n" +
-    "\n" +
-    "  experience: [\n" +
-    "    {\n" +
-    "      company: \"Private Company\",\n" +
-    "      role: \"Tech Lead\",\n" +
-    "      period: \"2025 — Present\",\n" +
-    "      highlights: [\n" +
-    "        \"Led migration from monolithic legacy system to event driven microservices\",\n" +
-    "        \"Mentored junior developers across multiple product teams\",\n" +
-    "        \"Co-authored system architecture for future-proofed, scalable systems\",\n" +
-    "        \"Enforced coding quality standards across DevOps and distributed systems development\",\n" +
-    "        \"Coordinated with stakeholders, business analysts, and managers to clarify, prioritize and deliver features\",\n" +
-    "        \"Provided cross-team expertise on technical design, debugging, and implementation\",\n" +
-    "        \"Continued to enable all sectors of the business with client onboarding and technical support\",\n" +
-    "      ],\n" +
-    "    },\n" +
-    "    {\n" +
-    "      company: \"Private Company\",\n" +
-    "      role: \"Senior Software Engineer\",\n" +
-    "      period: \"2022 — 2025\",\n" +
-    "      highlights: [\n" +
-    "        \"Built core payment infrastructure from scratch\",\n" +
-    "        \"Designed and implemented service for private object storage and retrieval\",\n" +
-    "        \"Identified and developed solutions to automate manual procedures\",\n" +
-    "        \"Mentored junior developers within the infrastructure team\",\n" +
-    "        \"Maintained legacy systems while providing expertise in the design of their planned migration\",\n" +
-    "        \"Enabled all sectors of the business with client onboarding and technical support\",\n" +
-    "      ],\n" +
-    "    },\n" +
-    "    {\n" +
-    "      company: \"Private Company\",\n" +
-    "      role: \"Software Engineer\",\n" +
-    "      period: \"2019 — 2022\",\n" +
-    "      highlights: [\n" +
-    "        \"Built fully featured sales lead management system\",\n" +
-    "        \"Implemented programmatic generation of roll-forming machine files\",\n" +
-    "        \"Adopted C# as a primary programming language\",\n" +
-    "        \"Learned and implemented IaC using Pulumi\",\n" +
-    "      ],\n" +
-    "    },\n" +
-    "    {\n" +
-    "      company: \"Private Company\",\n" +
-    "      role: \"Junior Software Engineer\",\n" +
-    "      period: \"2018 — 2019\",\n" +
-    "      highlights: [\n" +
-    "        \"Took ownership of existing PHP systems while learning company tribal knowledge\",\n" +
-    "        \"Migrated shared hosting servers to AWS\",\n" +
-    "        \"Moved company towards modern communication tools like Slack and GSuite\",\n" +
-    "      ],\n" +
-    "    },\n" +
-    "    {\n" +
-    "      company: \"Various Telecom Contractors\",\n" +
-    "      role: \"DC Electrician\",\n" +
-    "      period: \"2010 — 2018\",\n" +
-    "      highlights: [\n" +
-    "        \"Developed and documented conversion protocol for GE Galaxy power plants\",\n" +
-    "        \"Installed emergency battery backup systems in cell towers\",\n" +
-    "        \"Installed central office UPS and grounding systems\",\n" +
-    "      ],\n" +
-    "    },\n" +
-    "  ],\n" +
-    "\n" +
-    "  education: {\n" +
-    "    degree: \"GED\",\n" +
-    "    year: 2010,\n" +
-    "  },\n" +
-    "\n" +
-    "  currentlyLearning: [\"Go\", \"Python\"],\n" +
-    "\n" +
-    "  readingList: [\n" +
-    "    \"Clean Code by Robert Martin\",\n" +
-    "    \"Pragmatic Programmer by Dave Thomas\",\n" +
-    "    \"Clean Architecture by Robert Martin\",\n" +
-    "    \"Test Driven Development by Kent Beck\",\n" +
-    "    \"Thinking in Systems by Donella Meadows\",\n" +
-    "    \"Building Event-Driven Microservices by Adam Bellemare\",\n" +
-    "    \"Monolith to Microservices by Sam Newman\",\n" +
-    "    \"Staff Engineer by Donella Will Larson\",\n" +
-    "    \"Sea of Tranquility by Emily St John Mandel\",\n" +
-    "    \"Designing Interfaces by Jenifer Tidwell\"\n" +
-    "  ],\n" +
-    "}";
+export const resumeCodeText = `{
+  name: "Preston Sparks",
+  title: "Software Engineer",
+  location: "TX, USA",
+
+  skills: {
+    languages: [
+      "C#",
+      "TypeScript",
+      "PHP",
+      "SQL",
+      "C++"
+    ],
+    frontend: [
+      "React",
+      "Blazor UI",
+      "Vue",
+      "MaterializeCSS"
+    ],
+    backend: [
+      ".NET",
+      "Laravel",
+      "PostgreSQL",
+      "Redis",
+      "RabbitMQ",
+      "MySQL"
+    ],
+    tools: [
+      "Git",
+      "Docker",
+      "AWS",
+      "Kubernetes",
+      "Pulumi",
+      "MartenDB"
+    ],
+  },
+
+  education: {
+    degree: "GED",
+    year: 2010,
+  },
+}`;
