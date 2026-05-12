@@ -12,16 +12,19 @@ interface Props {
 
 export function Terminal(props: Props) {
     return (
-        <section className="code-editor">
-            <div className="terminal-prompt">
-                <span>ubuntu@hopper$</span> cat preston-resume.json
-            </div>
-            <SyntaxHighlighter language="javascript" style={idea} customStyle={{ background: 'transparent' }}>
-                {props.children ?? ''}
-            </SyntaxHighlighter>
-            <div className="terminal-prompt">
-                <span>ubuntu@hopper$</span> <span className="terminal-cursor">_</span>
-            </div>
-        </section>
+        <>
+            <h2>Skills & Qualifications</h2>
+            <section className="terminal">
+                <div className="terminal-prompt">
+                    <span>ubuntu@hopper$</span> cat about.json
+                </div>
+                <SyntaxHighlighter language="javascript" style={idea} customStyle={{ background: 'transparent', whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
+                    {props.children ?? ''}
+                </SyntaxHighlighter>
+                <div className="terminal-prompt">
+                    <span>ubuntu@hopper$</span> <span className="terminal-cursor">_</span>
+                </div>
+            </section>
+        </>
     );
 }
