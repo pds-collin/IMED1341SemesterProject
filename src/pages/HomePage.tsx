@@ -71,14 +71,14 @@ const steps: Step[] = [
         of good examples to look up to. Whether you want to idolize Ada Lovelace for writing a program before computers 
         even existed, or you want to worship Grace Hopper for inventing the compiler, or you want to imagine what it would
         have been like to look over the shoulders of Dennis Ritchie and Ken Thompson as they created the C language or Unix,
-         it's always a good idea to build on the lessons that they learned for us. Abstraction is core part of software 
+         it's always a good idea to build on the lessons that they learned for us. Abstraction is a core part of software 
          engineering and for good reason. Imagine having to write ones and zeroes just to get a little light to turn on 
-         or pushing a cart full of punch cards to the massive room whose only purpose is to house the machine that can 
+         or pushing a cart full of punch cards to the massive room whose only purpose is to house the machine that can run 
          the program on them to carry out long division. You can find good examples everywhere and most of them don't pop
          up when you type their name into Wikipedia. Hell, many of them aren't even programmers. I have learned more from
-         the people who saw me struggling to figure out the logic in a function and took the time to show me the light. 
-         Mentors are one of the most valuable things in life and not everyone is willing to spend countless hours with 
-         you to build your personal and professional skills so don't take them for granted.`,
+         the people who saw me struggling to figure out the logic in a function and took the time to show me the light than
+         I can remember. Mentors are one of the most valuable things in life and not everyone is willing to spend 
+         countless hours with you to build your personal and professional skills so don't take them for granted.`,
     },
     {
         number: '05',
@@ -86,7 +86,7 @@ const steps: Step[] = [
         body: `The urge to learn everything is real, and it will paralyze you. Pick one language. Pick one framework. Go
          so deep into it that you feel like you could write it from memory. The reality is that 
          there are certain concepts that you can only learn when it's the last thing to learn about a language. Imagine 
-         trying to be a professional athlete in every sport. Sure, you might be natural, and you might be pretty good at 
+         trying to be a professional athlete in every sport. Sure, you might be a natural, and you might be pretty good at 
          everything, but you won't have mastered any of them. It will get to a point that you find the thing that you've
          mastered so trivial that it's boring. This is the point at which you are fully equipped to easily learn the rest
          of the technologies. I like the saying that "every programming language you pick up is easier to learn than the 
@@ -99,7 +99,7 @@ const steps: Step[] = [
     {
         number: '06',
         title: 'Develop Impostor Syndrome',
-        body: `This sounds like bad advice, but hear it out. Impostor syndrome means you feel like you are surrounded by 
+        body: `This sounds like bad advice, but hear me out. Impostor syndrome means you feel like you are surrounded by 
         people who know more than you, in a field that moves faster than you can keep up with. That's exactly where you 
         want to be every once in a while. The moment you stop feeling like you're behind is the moment you've stopped 
         growing. Wear it as a sign you're in the right room. At the same time, don't let the feeling of existential dread
@@ -116,7 +116,7 @@ const steps: Step[] = [
         your own understanding and close them. Every explanation you give makes you better. The term "rubber ducking" 
         originates in the practice of hitting a difficult problem and describing what you are doing to a literal rubber
          duck sitting on your desk. As comical as it sounds, it is a tradition that has carried on for several generations
-         of programmers. Sometimes, "rubber ducking" is just calling a coworker on Slack, sharing your screen, and just 
+         of programmers. Sometimes, "rubber ducking" is calling a coworker on Slack, sharing your screen, and just 
          talking through the problem. I have personally started so many calls that lasted less than a minute just to end 
          with "oh, hey, nevermind. I found the problem." Once you've done this enough times, you get to be the rubber duck
          that your junior developers turn to when they are stuck. This is my favorite part of this profession. When I get
@@ -164,7 +164,7 @@ const steps: Step[] = [
         Break something different. Follow a new example. The engineers who keep growing are the ones who are always, in 
         some sense, beginners again. The thing that keeps me coming back for more is the continual cycle of sheer frustration,
         to the point of contemplating setting your keyboard on fire, that is punctuated by an overwhelming sense of triumph
-        when you finally get it to run. There's nothing that compares to your victory dance over conquered issue that lies
+        when you finally get it to run. There's nothing that compares to your victory dance over the conquered issue that lies
         at your feet.`,
     },
 ];
