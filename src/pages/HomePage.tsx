@@ -15,7 +15,6 @@ const steps: Step[] = [
         title: 'Be Curious',
         body: `Curiosity and a computer are the only prerequisites. You don't need a degree. You don't need a background 
         in mathematics or robotics. You don't need to know the 7 layers of the OSI model. You don't need to 
-        in mathematics or robotics. You don't need to know the 7 layers of the OSI model. You don't need to 
         know how a browser works. You don't need to know how a microprocessor operates. You don't even need to know what a 
         programming language is. All you need is the curiosity to look under the hood and a little fascination with how
         the magic box that sits on your desk and acts as a window into all of the people and places on the earth that 
